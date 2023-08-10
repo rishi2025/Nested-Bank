@@ -1,0 +1,390 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: inherit;
+}
+
+body {
+    background-color:rgb(199, 255, 254);
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    color: #333;
+}
+
+.app {
+    padding-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.amt {
+    font-weight: 500;
+    font-size: 250%;
+    width: 45%;
+    text-align: right;
+}
+
+.curr {
+    font-weight: 600;
+    font-size: 150%;
+}
+
+.currDate {
+    color: grey;
+}
+
+
+.delete {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.deleteHeading {
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.deleteGo {
+    font-weight: 600;
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 70%;
+}
+
+.deleteGo:hover {
+    background-color:  rgb(220, 44, 5);
+    color: #fff;
+    width: 20%;
+    border: 3px white;
+    cursor: pointer;
+}
+
+.deleteTo {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 130%;
+    text-align: center;
+}
+
+.deleteAmount {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 130%;
+    text-align: center;
+}
+
+.deletePassword {
+    padding: 0.1rem;
+    padding-left: 0.55rem;
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 168, 168);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 130%;
+}
+
+.deletePassword:hover {
+    background-color:  rgb(250, 202, 202);
+}
+
+.deleteUsername {
+    padding: 0.1rem;
+    padding-left: 0.55rem;
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 168, 168);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 130%;
+}
+
+.deleteUsername:hover {
+    background-color:  rgb(250, 202, 202);
+}
+
+.deposit {
+    background: linear-gradient(to top left, #39b385, #9be15d);
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 5%;
+    border-radius: 5rem;
+    color: #fff;
+    width: 20%;
+}
+
+.go {
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.header {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerName {
+    font-weight: 600;
+    font-size: 200%;
+    width: 33%;
+    padding-left: 2%;
+}
+
+.img {
+    display: flex;
+    width: 33%;
+    padding-left: 17.5%;
+    justify-content: center;
+}
+
+.inp {
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20%;
+    width: 60%;
+    padding-bottom: 2%;
+}
+
+.inputUsername {
+    padding: 0.1rem;
+    padding-left: 0.55rem;
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 228, 119);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 130%;
+}
+
+.inputUsername:hover{
+    border: none;
+    background-color:  rgb(255, 234, 151);
+}
+
+.inputAmount {
+    padding: 0.1rem;
+    padding-left: 0.55rem;
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 228, 119);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 130%;
+}
+
+.inputAmount:hover{
+    border: none;
+    background-color:  rgb(255, 234, 151);
+}
+
+.inputLoan {
+    padding: 0.1rem;
+    padding-left: 0.55rem;
+    margin-top: 0.5rem;
+    background-color:  rgb(170, 255, 134);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 130%;
+}
+
+.inputLoan:hover{
+    border: none;
+    background-color:  rgb(198, 250, 176);
+}
+
+.lastDay {
+    margin-left: 5%;
+    color: gray;
+    font-size: 85%;
+    width: 20%;
+}
+
+.left {
+    background-color: rgb(225, 242, 249);
+    width: 55%;
+    overflow: scroll;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.leftInfo {
+    width: 55%;
+    text-align: left;
+}
+
+.logo {
+    border-radius: 50% 50% 50% 50%;
+    width: 12.5%;
+    border: 4px solid rgb(93, 137, 136);;
+}
+
+.lowerText {
+    font-size: 85%;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.movement {
+    width: 98%;
+    background-color: rgb(230, 230, 230);
+    height: 20%;
+    margin-bottom: 2%;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.1rem solid #333;
+    align-items: center;
+}
+
+.movementAmt {
+    text-align: right;
+    width: 40%;
+}
+
+.request {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.requestHeading {
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.requestGo {
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 70%;
+}
+
+.requestGo:hover {
+    background-color:  rgba(23, 184, 50, 0.847);
+    color: #fff;
+    width: 20%;
+    border: 3px white;
+    cursor: pointer;
+}
+
+.requestAmount {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 130%;
+    text-align: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.rightTop {
+    background: linear-gradient(to top left, #ffb003, #ffcb03);
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    border-radius: 10px;
+}
+
+.rightMid {
+    background: linear-gradient(to top left, #39b385, #9be15d);
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    border-radius: 10px;
+}
+
+.rightBottom {
+    background: linear-gradient(to top left, #e52a5a, #ff585f);
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    border-radius: 10px;
+}
+
+.transfer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.transferHeading {
+    font-weight: 600;
+    font-size: 100%;
+}
+
+.transferGo {
+    margin-top: 0.5rem;
+    background-color:  rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    width: 10%;
+    height: 70%;
+}
+
+.transferGo:hover {
+    background-color:  rgb(255, 140, 0);
+    color: #fff;
+    width: 20%;
+    border: 3px white;
+    cursor: pointer;
+}
+
+.transferTo {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 130%;
+    text-align: center;
+}
+
+.transferAmount {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 130%;
+    text-align: center;
+}
+
+.userInput {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 50%;
+    height: 130%;
+    justify-content: right;
+}

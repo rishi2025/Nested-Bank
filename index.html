@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "style.css" rel = "styleSheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Nested Bank</title>
+</head>
+<body>
+    <div class = "header">
+        <div class = "headerName">Nested</div>
+        <div class = "img"><img src="logo.jpg" class = "logo"></div>
+        <div class = "userInput">
+            <input class = "inp" type="text" placeholder="Username">
+            <input class = "inp" type="password" placeholder="Password">
+            <button class = "go"> → </button>
+        </div>
+    </div>
+    <hr size="3%" color="black">
+    <div class="app">
+        <div class = "info">
+            <div class = "leftInfo">
+                <div class = "curr">Current Balance</div>
+                <div class = "currDate">As of 10/08/23, 12:21 PM</div>
+            </div>
+            <div class = "amt"> $ 10000 </div>
+        </div>
+
+        <!--main-->
+        <div class = "main">
+
+
+            <!--left-->
+            <div class = "left">
+                <div class = "movement">
+                    <div class = "deposit">2. DEPOSIT</div>
+                    <div class = "lastDay"> 3 days ago </div>
+                    <div class = "movementAmt"> $ 100,000  </div>
+                </div>
+                <div class = "movement">
+                    <div class = "deposit">1. CREATED</div>
+                    <div class = "lastDay"> 3 days ago </div>
+                    <div class = "movementAmt"> $ 0  </div>
+                </div>
+            </div>
+
+
+            <!--right-->
+            <div class = "right">
+                <div class = "rightTop">
+                    <div class = "transferHeading"> Transfer Money </div>
+                    <div class = "transfer">
+                        <div class="transferTo">
+                            <input class = "inputUsername" type="text">
+                            <span class ="lowerText" >Transfer To</span>
+                        </div>
+                        <div class = "transferAmount">
+                            <input class = "inputAmount" type="number">
+                            <span class ="lowerText" >Amount</span>
+                        </div>
+                        <button class = "transferGo"> → </button>
+                    </div>
+                </div>
+                <div class = "rightMid">
+                    <div class = "requestHeading"> Request Loan </div>
+                    <div class = "request">
+                        <div class = "requestAmount">
+                            <input class = "inputLoan" type="number">
+                            <span class ="lowerText" >Amount</span>
+                        </div>
+                        <button class = "requestGo"> → </button>
+                    </div>
+                </div>
+                <div class = "rightBottom">
+                    <div class = "deleteHeading"> Close Account </div>
+                    <div class = "delete">
+                        <div class="deleteTo">
+                            <input class = "deleteUsername" type="text">
+                            <span class ="lowerText" >Username</span>
+                        </div>
+                        <div class = "deleteAmount">
+                            <input class = "deletePassword" type="password">
+                            <span class ="lowerText" >Password</span>
+                        </div>
+                        <button class = "deleteGo"> → </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "script.js"></script>
+</html>
