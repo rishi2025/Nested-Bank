@@ -86,6 +86,33 @@ const createUserNames = function(accs) {
     });
 };
 
+const init = function () {
+    document.querySelector('.app').style.opacity = 0;
+    loginPassword.value = '';
+    loginUsername.value = '';
+    loginPassword.blur();
+    loginUsername.blur();
+}
+
+const displayError = function (s) {
+    document.querySelector('.errorText').textContent = s;
+    document.querySelector('.overlay').classList.remove('hidden');
+    document.querySelector('.popup').classList.remove('hidden');
+    document.querySelector('.popup').classList.add('popupFlex');
+};
+
+document.querySelector('.okay').addEventListener('click', function () {
+    document.querySelector('.overlay').classList.add('hidden');
+    document.querySelector('.popup').classList.remove('popupFlex');
+    document.querySelector('.popup').classList.add('hidden');
+});
+
+document.querySelector('.overlay').addEventListener('click', function () {
+    document.querySelector('.overlay').classList.add('hidden');
+    document.querySelector('.popup').classList.remove('popupFlex');
+    document.querySelector('.popup').classList.add('hidden');
+});
+
 createUserNames(accounts);
 
 const update = function (account) {
@@ -153,11 +180,12 @@ login.addEventListener('click', function (e) {
 
     else
     {
-        console.log("MODAL WINDOW");
-        // TO BE DONE IN FUTURE
+        displayError("USERNAME OR PASSWORD IS INCORRECT...");
+        init();
     }
 
     loginPassword.value = '';
     loginUsername.value = '';
-
+    loginPassword.blur();
+    loginUsername.blur();
 });
