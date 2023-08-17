@@ -76,6 +76,7 @@ const deleteGo = document.querySelector('.deleteGo');
 const income = document.querySelector('.incomeAmt');
 const outgo = document.querySelector('.outgoAmt');
 const interestV = document.querySelector('.interestAmt');
+const sort = document.querySelector('.sort');
 const accounts = [account1, account2, account3, account4, account5, account6, account7, account8];
 
 const createUserNames = function(accs) {
@@ -127,10 +128,10 @@ document.querySelector('.overlay').addEventListener('click', function () {
     document.querySelector('.popup').classList.add('hidden');
 });
 
-const update = function (account) {
+const update = function (account, sorting = false) {
     document.querySelector('.app').style.opacity = 100;
     headerName.textContent = `Hello, ` + account.owner.split(' ')[0];
-    const movements = account.movements;
+    const movements = (sorting) ? account.movements.slice().sort((a, b) => a - b) : account.movements;
     left.innerHTML = '';
     let x = 1;
     movements.forEach(function (temp, i) {
@@ -315,3 +316,17 @@ deleteGo.addEventListener('click', function (e) {
     deletePassword.value = '';
     deletePassword.blur();   
 });
+
+let sortState = false;
+sort.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (!currAccount)
+        displayError("YOU ARE NOT LOGGED IN");
+
+    else
+    {
+        update(currAccount, !sortState);
+        sortState = !sortState;
+    }
+})
