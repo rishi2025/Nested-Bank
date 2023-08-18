@@ -160,7 +160,7 @@ body {
     justify-content: left;
     padding-left: 20%;
     align-items: center;
-    gap: 3.5rem;
+    gap: 2.5rem;
 }
 
 .go {
@@ -326,7 +326,7 @@ body {
 }
 
 .left {
-    background-color: rgb(225, 242, 249);
+    background-color: rgb(159, 158, 158);
     width: 55%;
     overflow: scroll;
     padding-left: 1%;

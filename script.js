@@ -4,6 +4,16 @@ const account1 = {
     owner: "Rishi Jha",
     password: "137",
     movements: [5000, 20000, -10000, 762, -861, 42, 9873, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 2,
 };
 
@@ -11,6 +21,16 @@ const account2 = {
     owner: "Yashika Sharma",
     password: "037",
     movements: [5000, 2000, 10000, -762, -861, 4200, 9873],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 5,
 };
 
@@ -18,6 +38,16 @@ const account3 = {
     owner: "Sneha Nautiyal",
     password: "155",
     movements: [5000, 20000, -10000, 762, -861, 42, 9873, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 1.5,
 };
 
@@ -25,6 +55,16 @@ const account4 = {
     owner: "Shreyash Singh Chauhan",
     password: "121",
     movements: [5000, -20000, 10000, 762, -861, 42, 9873, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 2.5,
 };
 
@@ -32,6 +72,16 @@ const account5 = {
     owner: "Sunny Sehwag",
     password: "147",
     movements: [5000, 20000, -10000, 762, 9873, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 4.2,
 };
 
@@ -39,6 +89,16 @@ const account6 = {
     owner: "Swarika Sharma",
     password: "118",
     movements: [5000, 20000, 10000, 11762, -861, 42, 9873, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 3.6,
 };
 
@@ -46,6 +106,16 @@ const account7 = {
     owner: "Sarthak Goyal",
     password: "144",
     movements: [-5000, -20000, -10000, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 0.5,
 };
 
@@ -53,6 +123,16 @@ const account8 = {
     owner: "Vinit Jain",
     password: "145",
     movements: [5000, 20000, -10000, 762, -861, 42, 9873, -1287],
+    mdates: [
+        "2023-01-21T08:42:30.741Z",
+        "2023-05-23T08:42:30.741Z",
+        "2023-05-27T08:42:30.741Z",
+        "2023-07-27T08:42:30.741Z",
+        "2023-07-04T08:42:30.741Z",
+        "2023-08-04T08:42:30.741Z",
+        "2023-08-10T08:42:30.741Z",
+        "2023-08-18T08:42:30.741Z",
+    ],
     interest: 1.8,
 };
 
@@ -98,8 +178,6 @@ const createGlobalAmt = function(accs) {
     });
 };
 
-createGlobalAmt(accounts);
-
 const init = function () {
     document.querySelector('.app').style.opacity = 0;
     loginPassword.value = '';
@@ -128,12 +206,31 @@ document.querySelector('.overlay').addEventListener('click', function () {
     document.querySelector('.popup').classList.add('hidden');
 });
 
+const showDate = function (d) {
+    const day = `${(d.getDate())}`.padStart(2,0);
+    const month = `${d.getMonth() + 1}`.padStart(2,0);
+    const year = d.getFullYear();
+    return `${day}/${month}/${year}`;
+};
+
+const showTime = function (d) {
+    const hours = `${d.getHours()}`.padStart(2, 0);
+    const minutes = `${d.getMinutes()}`.padStart(2, 0);
+    return `${hours}:${minutes}`;
+}
+
 const update = function (account, sorting = false) {
     document.querySelector('.app').style.opacity = 100;
     headerName.textContent = `Hello, ` + account.owner.split(' ')[0];
     const movements = (sorting) ? account.movements.slice().sort((a, b) => a - b) : account.movements;
+    const dz = account.mdates;
     left.innerHTML = '';
     let x = 1;
+
+    // UPDATING DATE
+    const now = new Date();
+    currDate.textContent = `As of ${showDate(now)}, ${showTime(now)}`;
+
     movements.forEach(function (temp, i) {
 
         const [neg, type] = (temp < 0) ? ["withdraw", "WITHDRAW"] : ["deposit", "DEPOSIT"];
@@ -141,12 +238,16 @@ const update = function (account, sorting = false) {
         const html = `
             <div class = "movement">
                 <div class = "${neg}">${x}. ${type}</div>
-                <div class = "lastDay"> 3 days ago </div>
-                <div class = "movementAmt"> ${temp} $  </div>
+                <div class = "lastDay"> ${showDate(new Date(dz[i]))} </div>
+                <div class = "movementAmt"> ${temp.toFixed(2)} $  </div>
             </div>
             `;
 
         left.insertAdjacentHTML('afterbegin', html);
+        if (i % 2)
+            document.querySelector('.movement').style.backgroundColor = "rgb(192, 192, 192)";
+        else
+            document.querySelector('.movement').style.backgroundColor = "white";
         x++;
     });
 
@@ -157,22 +258,22 @@ const update = function (account, sorting = false) {
         const incomeAmt = movements
             .filter(mov => mov > 0)
             .reduce((acc, mov) => acc + mov, 0);
-        income.textContent = `${incomeAmt} $`;
+        income.textContent = `${(incomeAmt.toFixed(2))} $`;
 
         const outgoAmt = movements
             .filter(mov => mov < 0)
             .reduce((acc, mov) => acc + mov, 0);
-        outgo.textContent = `${Math.abs(outgoAmt)} $`;
+        outgo.textContent = `${(Math.abs(outgoAmt).toFixed(2))} $`;
 
         const interestAmt = movements
             .filter(mov => mov > 0)
             .map(deposit => deposit * (account.interest / 100))
             .filter(int => int >= 1)
             .reduce((acc, mov) => acc + mov, 0);
-        const int = Math.trunc(interestAmt);
-        interestV.textContent = `${int + (Math.trunc((interestAmt - int) * 100)) / 100} $`;
-        account.globalAmt = balance + int + (Math.trunc((interestAmt - int) * 100)) / 100;
-        amt.textContent = `${account.globalAmt} $`;
+        const int = +(interestAmt.toFixed(2));
+        interestV.textContent = `${int.toFixed(2)} $`;
+        account.globalAmt = (+(balance + int).toFixed(2));
+        amt.textContent = `${account.globalAmt.toFixed(2)} $`;
     };
     calcStats();
 };
@@ -228,6 +329,8 @@ transferGo.addEventListener('click', function (e) {
                     {
                         currAccount.movements.push(-Number(transferAmt.value));
                         transferAccount.movements.push(Number(transferAmt.value));
+                        currAccount.mdates.push(new Date().toISOString());
+                        transferAccount.mdates.push(new Date().toISOString());
                         update(currAccount);
                     }
                 }
@@ -256,7 +359,7 @@ requestGo.addEventListener('click', function (e) {
     //Prevents form from submitting
     e.preventDefault();
 
-    const loan = inputLoan.value;
+    const loan = Math.ceil(inputLoan.value);
     if (!currAccount)
         displayError("YOU ARE NOT LOGGED IN");
 
@@ -271,6 +374,7 @@ requestGo.addEventListener('click', function (e) {
             else
             {
                 currAccount.movements.push(Number(loan));
+                currAccount.mdates.push(new Date().toISOString());
                 update(currAccount);
             }
         }
