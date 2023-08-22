@@ -210,6 +210,13 @@ const showDate = function (d) {
     const day = `${(d.getDate())}`.padStart(2,0);
     const month = `${d.getMonth() + 1}`.padStart(2,0);
     const year = d.getFullYear();
+    const difference = Math.round((Number(new Date()) - Number(d)) / (1000 * 60 * 60 * 24));
+    if (difference == 0)
+        return "TODAY";
+    if (difference == 1)
+        return "YESTERDAY";
+    if (difference <= 7)
+        return `${difference} DAYS AGO`;
     return `${day}/${month}/${year}`;
 };
 
@@ -217,13 +224,54 @@ const showTime = function (d) {
     const hours = `${d.getHours()}`.padStart(2, 0);
     const minutes = `${d.getMinutes()}`.padStart(2, 0);
     return `${hours}:${minutes}`;
-}
+};
+
+const formatAmount = function (temp) {
+    const formatted = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+    }).format(temp);
+    return formatted;
+};
+
+let timeChange;
+
+const startTimer = function () {
+    let time = 600;
+
+    const tick = function () {
+        const min = String(Math.trunc(time / 60)).padStart(2, 0);
+        const sec = String(time % 60).padStart(2, 0);
+        document.querySelector('.timer').textContent = `You will be logged out in: ${min}:${sec}`;
+
+        if (time === 0)
+        {
+            clearInterval(timeChange);
+            init();
+        }
+
+        time--;
+    }
+
+    tick();
+    timeChange = setInterval(tick, 1000);
+    return timeChange;
+};
 
 const update = function (account, sorting = false) {
     document.querySelector('.app').style.opacity = 100;
     headerName.textContent = `Hello, ` + account.owner.split(' ')[0];
-    const movements = (sorting) ? account.movements.slice().sort((a, b) => a - b) : account.movements;
-    const dz = account.mdates;
+    const accCombo = [];
+    for (let i = 0; i < account.movements.length; i++)
+        accCombo.push([account.movements[i], account.mdates[i]]);
+
+    const sortedAcc = (sorting) ? accCombo.slice().sort((a, b) => a[0] - b[0]) : accCombo; 
+    
+    const movements = [];
+    const dz = [];
+    for (let i = 0; i < account.movements.length; i++)
+        movements.push(sortedAcc[i][0]), dz.push(sortedAcc[i][1]);
+
     left.innerHTML = '';
     let x = 1;
 
@@ -239,7 +287,7 @@ const update = function (account, sorting = false) {
             <div class = "movement">
                 <div class = "${neg}">${x}. ${type}</div>
                 <div class = "lastDay"> ${showDate(new Date(dz[i]))} </div>
-                <div class = "movementAmt"> ${temp.toFixed(2)} $  </div>
+                <div class = "movementAmt"> ${formatAmount(temp)}</div>
             </div>
             `;
 
@@ -258,12 +306,12 @@ const update = function (account, sorting = false) {
         const incomeAmt = movements
             .filter(mov => mov > 0)
             .reduce((acc, mov) => acc + mov, 0);
-        income.textContent = `${(incomeAmt.toFixed(2))} $`;
+        income.textContent = `${formatAmount(incomeAmt)}`;
 
         const outgoAmt = movements
             .filter(mov => mov < 0)
             .reduce((acc, mov) => acc + mov, 0);
-        outgo.textContent = `${(Math.abs(outgoAmt).toFixed(2))} $`;
+        outgo.textContent = `${formatAmount(Math.abs(outgoAmt))}`;
 
         const interestAmt = movements
             .filter(mov => mov > 0)
@@ -271,9 +319,9 @@ const update = function (account, sorting = false) {
             .filter(int => int >= 1)
             .reduce((acc, mov) => acc + mov, 0);
         const int = +(interestAmt.toFixed(2));
-        interestV.textContent = `${int.toFixed(2)} $`;
+        interestV.textContent = `${formatAmount(int)}`;
         account.globalAmt = (+(balance + int).toFixed(2));
-        amt.textContent = `${account.globalAmt.toFixed(2)} $`;
+        amt.textContent = `${(formatAmount(account.globalAmt))}`;
     };
     calcStats();
 };
@@ -288,7 +336,13 @@ login.addEventListener('click', function (e) {
         && acc.password === loginPassword.value));
 
     if (currAccount)
+    {
+        if (timeChange)
+            clearInterval(timeChange);
+
+        startTimer();
         update(currAccount);
+    }
 
     else
     {
@@ -306,6 +360,9 @@ let transferAccount;
 transferGo.addEventListener('click', function (e) {
     //Prevents form from submitting
     e.preventDefault();
+
+    clearInterval(timeChange);
+    timeChange = startTimer();
 
     transferAccount = accounts.find(acc => (acc.username === transferTo.value));
 
@@ -331,7 +388,9 @@ transferGo.addEventListener('click', function (e) {
                         transferAccount.movements.push(Number(transferAmt.value));
                         currAccount.mdates.push(new Date().toISOString());
                         transferAccount.mdates.push(new Date().toISOString());
-                        update(currAccount);
+                        setTimeout(function () {
+                            update(currAccount)
+                        }, 2500);
                     }
                 }
             }
@@ -359,6 +418,9 @@ requestGo.addEventListener('click', function (e) {
     //Prevents form from submitting
     e.preventDefault();
 
+    clearInterval(timeChange);
+    timeChange = startTimer();
+
     const loan = Math.ceil(inputLoan.value);
     if (!currAccount)
         displayError("YOU ARE NOT LOGGED IN");
@@ -375,7 +437,9 @@ requestGo.addEventListener('click', function (e) {
             {
                 currAccount.movements.push(Number(loan));
                 currAccount.mdates.push(new Date().toISOString());
-                update(currAccount);
+                setTimeout(function () {
+                    update(currAccount)
+                }, 2500);
             }
         }
         else
@@ -388,6 +452,9 @@ requestGo.addEventListener('click', function (e) {
 deleteGo.addEventListener('click', function (e) {
     //Prevents form from submitting
     e.preventDefault();
+
+    clearInterval(timeChange);
+    timeChange = startTimer();
 
     const deleteAccount = deleteUsername.value;
     const deletePin = deletePassword.value;
@@ -404,6 +471,7 @@ deleteGo.addEventListener('click', function (e) {
                     accounts.splice(index, 1);
                     displayError("ACCOUNT CLOSED SUCCESSFULLY");
                     console.log(accounts);
+                    clearInterval(timeChange);
                     init();
                 }
                 else
