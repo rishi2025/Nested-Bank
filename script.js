@@ -493,14 +493,13 @@ let sortState = false;
 sort.addEventListener('click', function (e) {
     e.preventDefault();
 
-    clearInterval(timeChange);
-    timeChange = startTimer();
-
     if (!currAccount)
         displayError("YOU ARE NOT LOGGED IN");
 
     else
     {
+        clearInterval(timeChange);
+        timeChange = startTimer();
         update(currAccount, !sortState);
         sortState = !sortState;
     }
